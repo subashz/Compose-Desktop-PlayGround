@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.system.module.type="sourceSet" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../desktop/src/jvmMain">
+      <sourceFolder url="file://$MODULE_DIR$/../../../desktop/src/jvmMain/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../desktop/src/jvmMain/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-saved-instance-state-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.material:material-icons-core-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-metadata:commonMain:1.3.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.0.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-http-cio-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-text-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.skiko:skiko-jvm:0.1.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-client-core-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-util-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-utils-jvm:1.4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm:0.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.desktop:desktop-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-layout-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.3.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-saved-instance-state-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.squareup.okio:okio:2.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.animation:animation-core-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-graphics-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.material:material-icons-core-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-text-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-unit-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-dispatch-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-http-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-client-serialization-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.animation:animation-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.animation:animation-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-client-logging-jvm:1.4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-network-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.animation:animation-core-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.desktop:desktop-jvm:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-util-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-client-json-jvm:1.4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.material:material-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-client-okhttp:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.3.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.material:material-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.squareup.okhttp3:okhttp:4.6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-text-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-geometry-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.skiko:skiko-jvm-runtime-linux:0.1.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-graphics-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-text-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.ktor:ktor-io-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.foundation:foundation-layout-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.4.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-geometry-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.ui:ui-unit-desktop:0.1.0-m1-build62" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.compose.runtime:runtime-dispatch-metadata:0.1.0-m1-build62" level="project" />
+    <orderEntry type="module" module-name="UnCaster.common.desktopMain" />
+    <orderEntry type="module" module-name="UnCaster.desktop.commonMain" />
+    <orderEntry type="module" module-name="UnCaster.common.commonMain" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="UnCaster.common.commonMain" />
+  </component>
+</module>

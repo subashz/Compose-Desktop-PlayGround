@@ -1,29 +1,25 @@
-import org.jetbrains.compose.compose
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+        mavenCentral()
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
 
-plugins {
-    kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.compose") version "0.1.0-build63"
-    application
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0")
+        classpath("com.android.tools.build:gradle:4.0.1")
+    }
 }
 
 group = "me.subash"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    jcenter()
-    mavenCentral()
-    maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
-}
-
-dependencies {
-    implementation(compose.desktop.all)
-}
-
-tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
-application {
-    mainClassName = "MainKt"
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
+    }
 }

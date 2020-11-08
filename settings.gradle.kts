@@ -1,10 +1,18 @@
 pluginManagement {
     repositories {
+        google()
+        jcenter()
         gradlePluginPortal()
         mavenCentral()
         maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     }
     
 }
-rootProject.name = "untitled"
 
+rootProject.name = "UnCaster"
+
+
+include(":android")
+include(":desktop")
+include(":common")
+include("coil-base")

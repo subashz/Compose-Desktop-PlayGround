@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.ktor:ktor-client-okhttp:1.4.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-okhttp/1.4.0/2d192894b36d5842b458e74b89ec2c302aedbdd8/ktor-client-okhttp-jvm-1.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-okhttp/1.4.0/c45a0131f0c2c146320c521eb1387ef9b0725ef7/ktor-client-okhttp-1.4.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-okhttp/1.4.0/2483831de8483fb6d55673fa96c10110a80b3e51/ktor-client-okhttp-1.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
