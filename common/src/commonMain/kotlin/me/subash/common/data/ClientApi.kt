@@ -60,8 +60,6 @@ object ClientApi {
 
 //    UnsplashPhotoPicker.init(
 //    (requireActivity()).applicationContext as Application, // application
-//    "8u-M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8",
-//    "pToCRABao9ISPydc0Nh8g-eHE9KUPNjcbYDBtoFmXso"
 //    /* optional page size */
 //    ).setLoggingEnabled(true)
 

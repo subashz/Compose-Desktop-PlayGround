@@ -326,7 +326,7 @@ fun WallpaperApp() = Window(
                         .fillMaxWidth()
 
                 ) {
-                    
+
                     RoundedImage(
                         data = selectedImage.value.urls.regular,
                         selectedImage = selectedImage,
