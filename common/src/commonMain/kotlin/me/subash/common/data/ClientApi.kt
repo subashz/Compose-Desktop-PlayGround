@@ -88,7 +88,8 @@ object ClientApi {
 //            header(HttpHeaders.Authorization, "Bearer $userId")
 //        }
 
-        val key = "8u-M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8"
+	// INSERT YOUR UNSPLASH API KEY 
+        val key = "M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8"
 
         header(HttpHeaders.CacheControl, "no-cache")
         url {
