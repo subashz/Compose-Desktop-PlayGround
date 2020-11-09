@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11">
-      <module name="UnCaster.coil-base.commonMain" target="1.8" />
-      <module name="UnCaster.coil-base.commonTest" target="1.8" />
-      <module name="UnCaster.coil-base.jvmMain" target="1.8" />
-      <module name="UnCaster.coil-base.jvmTest" target="1.8" />
+    <bytecodeTargetLevel target="14">
+      <module name="UnCaster.common.commonMain" target="1.8" />
+      <module name="UnCaster.common.commonTest" target="1.8" />
+      <module name="UnCaster.common.desktopMain" target="1.8" />
+      <module name="UnCaster.common.desktopTest" target="1.8" />
+      <module name="UnCaster.desktop.commonMain" target="1.8" />
+      <module name="UnCaster.desktop.commonTest" target="1.8" />
+      <module name="UnCaster.desktop.jvmMain" target="1.8" />
+      <module name="UnCaster.desktop.jvmTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,6 +2,9 @@
 
 Sample app for [Compose Desktop](https://www.jetbrains.com/lp/compose/).
 
+Changed the project structure from multiplatform to only desktop. 
+Multiplatform support with compose in intellij is really buggy at the moment.
+
 **Work in progress.**
 
 Design inspired from https://heycoaster.com/images/app-main.jpg.
