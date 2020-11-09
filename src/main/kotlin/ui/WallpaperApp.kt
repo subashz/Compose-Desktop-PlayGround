@@ -36,6 +36,7 @@ import data.ClientApi
 import model.UnsplashImage
 import ui.component.StaggeredVerticalGrid
 import util.Utils
+import java.io.IOException
 
 
 val topBgColor = 0xFF1F2025
@@ -63,24 +64,32 @@ fun WallpaperApp() = Window(
     val page = remember { mutableStateOf(1) }
     val loadNewData = remember { mutableStateOf(true) }
 
+    val selectedImage = remember { mutableStateOf(UnsplashImage()) }
+
     val desktopWallpaperPath = remember { mutableStateOf("") }
 
     LaunchedEffect(loadNewData.value) {
         if (loadNewData.value && query.value.isNotEmpty()) {
             val data = ClientApi.searchImage(query = query.value, page = page.value + 1)
-
             page.value = page.value + 1
+
+            val wallpaperEmpty = wallpaper.isEmpty()
             wallpaper.addAll(data.results)
-            searchText.value ="%,d photos".format(data.total)
+            if (wallpaperEmpty && data.results.isNotEmpty()) {
+                selectedImage.value = data.results.get(0)
+            }
+            searchText.value = "%,d photos".format(data.total)
             loadNewData.value = false
             println("Data is $data")
+
+
         }
 
     }
 
     LaunchedEffect(desktopWallpaperPath.value) {
         if (desktopWallpaperPath.value.isNotEmpty()) {
-//            setWallpaper(desktopWallpaperPath.value)
+            setWallpaper(desktopWallpaperPath.value)
         }
     }
 
@@ -93,7 +102,6 @@ fun WallpaperApp() = Window(
 
             Row {
 
-                val selectedImage = remember { mutableStateOf(UnsplashImage()) }
 
                 Column(
                     modifier = Modifier
@@ -454,14 +462,12 @@ fun ActionButton(
 }
 
 
-//suspend fun setWallpaper(path: String) {
-//    val data = ImageLoader.getCachedAbsolute(path)
+suspend fun setWallpaper(path: String) {
+//    val data = ClientApi.downloadImage(path)
 //    try {
 //        val process = Runtime.getRuntime().exec("feh --bg-fill $path");
 //    } catch (e: IOException) {
 //        e.printStackTrace();
 //    }
-//
-//
-//}
+}
 

@@ -117,7 +117,7 @@ object ClientApi {
 
 
         // INSERT YOUR UNSPLASH API KEY
-        val key = "M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8_2x"
+        val key = "M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8"
 
         url(BASE_URL) {
             takeFrom(BASE_URL)
