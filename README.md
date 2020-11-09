@@ -1,9 +1,10 @@
 # UnCaster
 
-Sample app for [Compose Desktop](https://www.jetbrains.com/lp/compose/).
+Sample app for [Compose Desktop] with Ktor (https://www.jetbrains.com/lp/compose/).
 
 Changed the project structure from multiplatform to only desktop. 
 Multiplatform support with compose in intellij is really buggy at the moment.
+Switched imageloading to ktor clients.
 
 **Work in progress.**
 
