@@ -2,11 +2,8 @@ package data
 
 import androidx.compose.ui.graphics.ImageAsset
 import androidx.compose.ui.graphics.asImageAsset
-import model.SearchResponse
-import model.UnsplashImage
 import io.ktor.client.*
-import io.ktor.client.engine.okhttp.OkHttp
-import io.ktor.client.features.*
+import io.ktor.client.engine.okhttp.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.logging.*
@@ -14,20 +11,28 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.util.*
-import okhttp3.*
-import okhttp3.CacheControl
+import model.SearchResponse
+import model.UnsplashImage
+import okhttp3.Cache
+import okhttp3.Dispatcher
+import okhttp3.OkHttpClient
+import okhttp3.Response
 import org.jetbrains.skija.Image
 import java.io.File
-import java.util.concurrent.TimeUnit
 
 
 object ClientApi {
 
+
     private const val BASE_URL = "https://api.unsplash.com"
 
 
-    var cacheSize = 10 * 1024 * 1024
+    // Create a disk cache with "10 MB" size
+    var cacheSize = 100 * 1024 * 1024
     var cache = Cache(File(".httpcache"), cacheSize.toLong())
+
+    // Don't limit concurrent network requests by host.
+    private val dispatcher = Dispatcher().apply { maxRequestsPerHost = maxRequests }
 
     private val client = HttpClient(OkHttp) {
         install(JsonFeature) {
@@ -41,33 +46,25 @@ object ClientApi {
                 override fun log(message: String) {
                     println(message)
                 }
-
             }
         }
 
         engine {
 
-            clientCacheSize = 300
+            clientCacheSize = cacheSize
 
-            addInterceptor { chain ->
-                val builder: Request.Builder = chain.request().newBuilder()
-                builder.cacheControl(CacheControl.FORCE_NETWORK)
-                chain.proceed(builder.build())
-            }
 
-            preconfigured = OkHttpClient.Builder().cache(cache).build()
+            preconfigured = OkHttpClient.Builder()
+                .cache(cache)
+                .dispatcher(dispatcher)
+                .build()
 
             addNetworkInterceptor {
                 val response: Response = it.proceed(it.request())
-
-                val cacheControl: CacheControl = CacheControl.Builder()
-                    .maxAge(24, TimeUnit.HOURS) // 15 minutes cache
-                    .build()
-
                 response.newBuilder()
                     .removeHeader("Pragma")
                     .removeHeader("Cache-Control")
-                    .header("Cache-Control", cacheControl.toString())
+                    .header("Cache-Control", "max-age=31536000,public")
                     .build()
             }
 
@@ -98,12 +95,13 @@ object ClientApi {
             method = HttpMethod.Get
         }
 
-        if (call.status.isSuccess()) {
+
+        return if (call.status.isSuccess()) {
             println("Success response on $url")
-            return Image.makeFromEncoded(call.content.toByteArray()).asImageAsset()
+            Image.makeFromEncoded(call.content.toByteArray()).asImageAsset()
         } else {
             println("Failed response on $url")
-            return null
+            null
         }
 
     }
@@ -113,16 +111,16 @@ object ClientApi {
 //    @GET
 //    fun downloadPhoto(@Url url: String): Completable
 
+
     private fun HttpRequestBuilder.apiUrl(path: String) {
 
-
         // INSERT YOUR UNSPLASH API KEY
-        val key = "M1rysEt3wGbEDYcwIjjD3gnWmET1A_eQz9273UL8"
+        val key = ""
 
         url(BASE_URL) {
             takeFrom(BASE_URL)
             encodedPath = path
         }
-        parameter("client_id", "$key")
+        parameter("client_id", key)
     }
 }

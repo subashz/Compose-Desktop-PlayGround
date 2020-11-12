@@ -18,20 +18,23 @@ import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.*
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.CanvasDrawScope
 import androidx.compose.ui.graphics.vector.VectorAsset
 import androidx.compose.ui.input.key.ExperimentalKeyInput
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.plus
 import androidx.compose.ui.input.key.shortcuts
+import androidx.compose.ui.layout.LayoutModifier
+import androidx.compose.ui.layout.Measurable
+import androidx.compose.ui.layout.MeasureResult
+import androidx.compose.ui.layout.MeasureScope
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.IntSize
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.*
 import data.ClientApi
 import model.UnsplashImage
 import ui.component.StaggeredVerticalGrid
@@ -107,6 +110,8 @@ fun WallpaperApp() = Window(
                     modifier = Modifier
                         .fillMaxWidth(0.7f)
                         .background(Color(topBgColor))
+
+
                 ) {
 
                     Spacer(
@@ -191,6 +196,7 @@ fun WallpaperApp() = Window(
                                         .clip(CircleShape)
                                         .background(Color.Gray)
                                         .padding(4.dp)
+
                                 )
                             }
 
@@ -302,6 +308,7 @@ fun WallpaperApp() = Window(
                                                 }
                                                 .padding(8.dp)
                                         )
+
                                     }
                                 }
                             }
@@ -406,6 +413,7 @@ fun WallpaperApp() = Window(
 fun RoundedImage(data: String, selectedImage: MutableState<UnsplashImage>, modifier: Modifier = Modifier) {
 
     val showBorder = data == selectedImage.value.urls.thumb
+
 
     HttpImage(
         data = data,
